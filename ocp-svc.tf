@@ -11,7 +11,7 @@ resource "ibm_is_instance" "ocp-svc" {
 
   vpc  = ibm_is_vpc.ocp4-vpc.id
   zone = "us-south-1"
-  keys = [ibm_is_ssh_key.iresh-pc-ssh-key.id]
+  keys = [ibm_is_ssh_key.iresh-pc-ssh-key.id, ibm_is_ssh_key.ireshw-pc-ssh-key.id]
 }
 
 resource "ibm_is_floating_ip" "ocp-svc-floating-ip" {
